@@ -12,3 +12,4 @@ class Task: Object{
     @Persisted var title: String = ""
     @Persisted var isMarked: Bool = false
 }
+
