@@ -28,18 +28,19 @@ class EditViewController: UIViewController {
         item.title = titleTextField.text ?? ""
         item.isMarked = markSwitch.isOn
         item.date1 = picker.date
+        editItem(item: item)
         
-        try! realm.write{
-            item.title = titleTextField.text ?? ""
-            item.isMarked = markSwitch.isOn
-            item.date1 = picker.date
-        }
-        
-        print("aaaa")
+        print(item.title)
+        print(item.isMarked)
         
         self.navigationController?.popViewController(animated: true)
     }
     
+    func editItem(item: Task){
+        try! realm.write{
+            realm.add(item)
+        }
+    }
 
     /*
     // MARK: - Navigation
