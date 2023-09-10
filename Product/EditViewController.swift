@@ -29,6 +29,12 @@ class EditViewController: UIViewController {
         item.isMarked = markSwitch.isOn
         item.date1 = picker.date
         
+        try! realm.write{
+            item.title = titleTextField.text ?? ""
+            item.isMarked = markSwitch.isOn
+            item.date1 = picker.date
+        }
+        
         print("aaaa")
         
         self.navigationController?.popViewController(animated: true)

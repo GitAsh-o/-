@@ -54,6 +54,9 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if editingStyle == .delete {
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            try! realm.write{
+                realm.delete(items[indexPath.row])
+            }
             tableView.reloadData()
         }
     }
