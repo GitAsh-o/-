@@ -12,6 +12,8 @@ class EditViewController: UIViewController {
     
     let realm = try! Realm()
     var items: [Task] = []
+    var selectedTask: Task!
+    
     
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var markSwitch: UISwitch!
@@ -24,23 +26,15 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func save1(){
-        let item = Task()
-        item.title = titleTextField.text ?? ""
-        item.isMarked = markSwitch.isOn
-        item.date1 = picker.date
-        editItem(item: item)
-        
-        print(item.title)
-        print(item.isMarked)
+        try! realm.write{
+            selectedTask.title = titleTextField.text ?? ""
+            selectedTask.isMarked = markSwitch.isOn
+            selectedTask.date1 = picker.date
+        }
         
         self.navigationController?.popViewController(animated: true)
     }
     
-    func editItem(item: Task){
-        try! realm.write{
-            realm.add(item)
-        }
-    }
 
     /*
     // MARK: - Navigation

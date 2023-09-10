@@ -16,6 +16,7 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var items: [Task] = []
     var selectedTask: Task!
     var selectedCategory: Category!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,8 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! TaskTableViewCell
         let item: Task = items[indexPath.row]
         cell.setCell(title: item.title, isMarked: item.isMarked, date1: item.date1)
+        
+        print(item.title)
         
         return cell
     }
@@ -69,6 +72,10 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "toNewTaskView"{
             let newTaskViewController = segue.destination as! NewTaskViewController
             newTaskViewController.category = self.selectedCategory
+        }
+        if segue.identifier == "toEditTaskView"{
+            let editViewController = segue.destination as! EditViewController
+            editViewController.selectedTask = self.selectedTask
         }
     }
 

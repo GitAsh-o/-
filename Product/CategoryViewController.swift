@@ -50,11 +50,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            try! realm.write{
+                realm.delete(categories[indexPath.row])
+            }
             categories.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            
-            UserDefaults.standard.set(categories, forKey: "TodoList" )
-            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+            tableView.reloadData()
         }
     }
     
