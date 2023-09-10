@@ -31,7 +31,7 @@ class EditViewController: UIViewController {
         
         print("aaaa")
         
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
 

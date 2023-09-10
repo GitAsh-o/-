@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649.6183206106869" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1656" y="-22"/>
         </scene>
         <!--編集-->
         <scene sceneID="0sG-68-ypi">
@@ -50,15 +50,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zip-yA-wYH">
-                                <rect key="frame" x="56" y="4.6666666666666679" width="321" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="保存"/>
-                                <connections>
-                                    <action selector="save" destination="7gQ-qf-0Lf" eventType="touchUpInside" id="IjJ-VY-dqM"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MjA-MQ-kq1">
                                 <rect key="frame" x="31" y="205" width="330" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,7 +91,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="保存"/>
                                 <connections>
-                                    <action selector="save1" destination="Z8U-Oe-lcD" eventType="touchUpInside" id="rH2-ci-uEv"/>
+                                    <action selector="save1" destination="Z8U-Oe-lcD" eventType="touchUpInside" id="EKe-Me-NF0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJ4-nx-IpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="732"/>
+            <point key="canvasLocation" x="2134" y="731"/>
         </scene>
         <!--New Task View Controller-->
         <scene sceneID="WV4-kW-lgM">
@@ -193,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4f-qe-qOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2603.8167938931297" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2610" y="-22"/>
         </scene>
         <!--カテゴリー-->
         <scene sceneID="GbW-h4-eCd">
@@ -287,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7q-MH-XcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-656"/>
+            <point key="canvasLocation" x="1656" y="-676"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="scr-gk-TqH">

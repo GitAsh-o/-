@@ -52,6 +52,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         if editingStyle == .delete {
             categories.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            UserDefaults.standard.set(categories, forKey: "TodoList" )
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
         }
     }
     
